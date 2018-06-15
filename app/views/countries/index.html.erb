@@ -14,6 +14,11 @@
   </div>
 
 <div class="form-group">
+    <%= f.label :flag_cont, "Flag contains" %>
+    <%= f.text_field :flag_cont, :class => "form-control", :placeholder => "Flag contains" %>
+  </div>
+
+<div class="form-group">
           <%= f.label :created_at, "Created at" %>
           <div class="row">
             <div class='col-md-6 mb-1'>
@@ -80,7 +85,7 @@
       <% @countries.each do |country| %>
       <tr>
         <td><%= country.name %></td>
-        <td><img src='<%= country.flag %>' class='img-responsive'></td>
+        <td><%= country.flag %></td>
         <td>
           <a href="/countries/<%= country.id %>" class="btn btn-primary">Show</a>
           <a href="/countries/<%= country.id %>/edit" class="btn btn-warning">Edit</a>
