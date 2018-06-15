@@ -78,7 +78,7 @@
           Country
         </label>
 
-        <input type="text" id="country_id" name="country_id" placeholder="Country" class="form-control" value="<%= @activity.country_id %>">
+        <%= select_tag(:country_id, options_from_collection_for_select(Country.all, :id, :name, @activity.country_id), :class => "form-control") %>
       </div>
 
       <button class="btn btn-success">
