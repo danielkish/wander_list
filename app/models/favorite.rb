@@ -7,6 +7,10 @@ class Favorite < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :country,
+             :through => :activity,
+             :source => :country
+
   # Validations
 
 end

@@ -6,6 +6,10 @@ class Country < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :favorites,
+             :through => :activities,
+             :source => :favorites
+
   # Validations
 
 end
