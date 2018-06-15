@@ -24,6 +24,11 @@
   </div>
 
 <div class="form-group">
+    <%= f.label :image_cont, "Image contains" %>
+    <%= f.text_field :image_cont, :class => "form-control", :placeholder => "Image contains" %>
+  </div>
+
+<div class="form-group">
           <%= f.label :created_at, "Created at" %>
           <div class="row">
             <div class='col-md-6 mb-1'>
@@ -110,7 +115,7 @@
       <tr>
         <td><%= activity.name %></td>
         <td><%= activity.address %></td>
-        <td><img src='<%= activity.image %>' class='img-responsive'></td>
+        <td><%= activity.image %></td>
         <td><%= activity.activity_type %></td>
         <td><%= activity.description %></td>
         <td>
