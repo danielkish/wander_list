@@ -25,10 +25,22 @@
       <dd><%= @activity.description %></dd>
 
       <dt>User</dt>
-      <dd><%= @activity.user_id %></dd>
+      <dd>
+        <% if @activity.user.present? %>
+          <a href="/users/<%= @activity.user_id %>">
+            <%= @activity.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Country</dt>
-      <dd><%= @activity.country_id %></dd>
+      <dd>
+        <% if @activity.country.present? %>
+          <a href="/countries/<%= @activity.country_id %>">
+            <%= @activity.country.name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
