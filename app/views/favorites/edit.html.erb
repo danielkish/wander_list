@@ -24,7 +24,7 @@
           Activity
         </label>
 
-        <input type="text" id="activity_id" name="activity_id" placeholder="Activity" class="form-control" value="<%= @favorite.activity_id %>">
+        <%= select_tag(:activity_id, options_from_collection_for_select(Activity.all, :id, :name, @favorite.activity_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for user_id -->
