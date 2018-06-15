@@ -1,6 +1,4 @@
 class Country < ApplicationRecord
-  mount_uploader :flag, FlagUploader
-
   # Direct associations
 
   has_many   :activities,
