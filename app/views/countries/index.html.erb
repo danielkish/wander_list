@@ -17,7 +17,7 @@
       <% @countries.each do |country| %>
       <tr>
         <td><%= country.name %></td>
-        <td><%= country.flag %></td>
+        <td><img src='<%= country.flag %>' class='img-responsive'></td>
         <td>
           <a href="/countries/<%= country.id %>" class="btn btn-primary">Show</a>
           <a href="/countries/<%= country.id %>/edit" class="btn btn-warning">Edit</a>
