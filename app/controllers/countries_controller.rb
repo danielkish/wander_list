@@ -6,6 +6,7 @@ class CountriesController < ApplicationController
   end
 
   def show
+    @activity = Activity.new
     @country = Country.find(params[:id])
 
     render("countries/show.html.erb")
