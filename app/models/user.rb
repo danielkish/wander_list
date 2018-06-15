@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :activities,
+             :dependent => :nullify
+
   # Indirect associations
 
   # Validations
